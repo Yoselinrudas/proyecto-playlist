@@ -40,3 +40,16 @@ model Playlist {
   user_id  Int 
   playlistsongs   PlaylistSongs[]  
 }  
+
+
+
+ model PlaylistSongs {  
+  id_song      Int  
+  id_playlist  Int  
+  playlist     Playlist   @relation(fields: [playlist_id], references: [id])  
+  playlist_id  Int  
+  song Song @relation(fields: [song_id], references: [id])  
+  song_id  Int  
+  @@unique([id_song, id_playlist])  
+}
+
