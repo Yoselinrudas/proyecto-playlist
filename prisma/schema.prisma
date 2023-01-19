@@ -21,3 +21,14 @@ model User {
   date_born   DateTime  @default(now()) 
   playlists   Playlist[] 
 }
+
+model Song {  
+  id        Int    @id @default(autoincrement())  
+  name      String  
+  artist    String  
+  album     String  
+  year      Int  
+  genre     String  
+  duration  Int  
+  playlistsongs   PlaylistSongs[]  
+}  
