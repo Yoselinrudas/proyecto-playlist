@@ -18,6 +18,6 @@ playlistRuta.get("/user/:idUser", BuscarUsuarioPlay);
 playlistRuta.post("/", verifyToken, InsertarPlaylist);
 
 /*Metodo Put Actulizacion*/
-playlistRuta.put("/add-song", verifyToken, AddListaProduc);
+playlistRuta.put("/addmusica", verifyToken, AddListaProduc);
 
 export default playlistRuta;
